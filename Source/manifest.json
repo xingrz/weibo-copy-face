@@ -1,0 +1,22 @@
+{
+	"name": "Copy Face",
+	"version": "1.0.0",
+	"description": "在新浪微博中直接复制表情文本",
+	"permissions": [
+		"tabs",
+		"http://weibo.com/*"
+	],
+	"icons": {
+		"128": "icon-128.png"
+	},
+	"content_scripts": [
+		{
+			"all_frames": true,
+			"js": ["mootools-core.js", "face.js"],
+			"matches": [
+				"http://weibo.com/*"
+			],
+			"run_at": "document_start"
+		}
+	]
+}
